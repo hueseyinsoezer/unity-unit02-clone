@@ -9,7 +9,8 @@ public class DetectCollisionMed : MonoBehaviour
         if (other.gameObject.tag=="Player")
         {
             Debug.Log("Temas: Game Over");
-        }else if (other.gameObject == gameObject)
+        }
+        else if (other.gameObject == gameObject)
         {
 
         }
