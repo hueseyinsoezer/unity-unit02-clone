@@ -9,6 +9,7 @@ public class DetectCollisionMed : MonoBehaviour
         if (other.gameObject.tag=="Player")
         {
             Debug.Log("Temas: Game Over");
+            Destroy(gameObject);
         }
         else if (other.gameObject == gameObject)
         {
