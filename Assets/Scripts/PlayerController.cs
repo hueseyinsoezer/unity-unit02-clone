@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 20f;//Boundary of movements value
+    public float speed = 20.0f;
+    public float xRange = 15.0f;//Boundary of movements value
     public GameObject projectilePrefab;
     
     // Start is called before the first frame update
