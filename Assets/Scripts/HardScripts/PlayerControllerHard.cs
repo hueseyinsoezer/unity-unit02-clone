@@ -25,7 +25,8 @@ public class PlayerControllerHard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Launch a projectile from player
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position+new Vector3(0,15/10, 15 / 10)
+                , projectilePrefab.transform.rotation);
         }
 
     }
