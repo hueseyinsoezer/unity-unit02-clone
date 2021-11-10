@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class DetectCollisionE : MonoBehaviour
 {
+    private GameManager gameManager;
+
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        //Check if the other tah was the Player, if it was remove a life
+        if (other.CompareTag("Player"))
         {
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
-        else
+        //Check if the other tag was an Animal, if so add points to the score
+        else if (other.gameObject.CompareTag("Food"))
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<AnimalHunger>().FeedAnimal(1);
             Destroy(other.gameObject);
         }
-        
+
     }
 
 }
